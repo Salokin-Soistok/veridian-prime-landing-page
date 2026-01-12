@@ -21,23 +21,22 @@ function App() {
 
   return (
     <>
-      <img src={logo} alt="Logo" />
-      <div className="header">
-        <h1>
-          Work Your Way <br />
-          Own Your Space <br />
-          Stay In Control
-        </h1>
+     <div className="hero">
+        <img src={logo} className="veridian-logo" alt="Logo" />
+        <div className="header">
+           <h1>
+             Work Your Way <br />
+             Own Your Space <br />
+             Stay In Control
+            </h1>
+        </div>
       </div>
 
       <div className="hero-section">
         <p className="company-introduction">
           Veridian Prime is a Privacy-First focused workspace designed to help you think clearly, stay organised, and own your data -- without distractions
         </p>
-        <button className="waitlist-button" onClick={() => {
-          const section = document.querySelector(".email-field");
-          section?.scrollIntoView({behavior: "smooth"});
-        }} type="button">Get Early Access</button>
+       <button className="join-button" onClick={() => window.open("https://tally.so/r/wAogWo", "_blank")} type="submit">Join Early Access</button>
       </div>
 
       <div className="main-section">
@@ -85,15 +84,7 @@ function App() {
 
         <div className="email-field">
           <form onSubmit={handleClick} className="signup">
-  <input
-    id="email"
-    type="email"
-    value={email}
-    onChange={(e) => setEMail(e.target.value)}
-    required 
-    placeholder="Enter your email"
-  />
-  <button className="join-button" onClick={() => window.open("https://tally.so/r/wAogWo", "_blank")} type="submit">Join Early Access</button>
+  
 </form>
 
         </div>
