@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import { Lock, Crosshair, Brain, Users } from "lucide-react";
+import { Lock, Crosshair, Brain, Users, CheckCircle, Check, X } from "lucide-react";
 import {
   FaInstagram,
   FaFacebook,
@@ -25,77 +25,175 @@ function App() {
         <img src={logo} className="veridian-logo" alt="Logo" />
         <div className="header">
            <h1>
-             Work Your Way <br />
-             Own Your Space <br />
-             Stay In Control
+             Your data shouldn't die when you change tools.
             </h1>
         </div>
       </div>
 
       <div className="hero-section">
         <p className="company-introduction">
-          Veridian Prime is a Privacy-First focused workspace designed to help you think clearly, stay organised, and own your data -- without distractions
+          Veridian Prime is a neutral, privacy-first data environment that lets organizations 
+          store, structure, and export their operational data in a way that remains usable, 
+          auditable, and migratable -- regardless of the software they use today or tomorrow.
         </p>
        <button className="join-button" onClick={() => window.open("https://tally.so/r/wAogWo", "_blank")} type="submit">Join Early Access</button>
       </div>
 
       <div className="main-section">
         <p className="customer-hook">
-          Veridian Prime is a private workspace where your notes, projects and ideas stay yours, simple, secure, and distraction-free.
+          <strong>The problem no SaaS wants to talk about</strong><br /><br />
         </p>
+        <p>
+          Most tools are built for speed, not longevity.<br /><br />
+          The pain only <b>appears years later</b> -- when you try to leave.<br /><br />
+        </p>
+        <div className="pain-container">
+          <ul className="pain-list">
+  <li>
+    <CheckCircle className="pain-icon" />
+    <span>
+      Exports lose structure, relationships, and context
+    </span>
+  </li>
 
-        <div className="icons-description">
-          <div className="text-center">
-            <Lock className="mx-auto h-10 w-10" />
-            <p className="mt-2 font-semibold">
-              Private By
-              <br />
-              Design
-            </p>
-          </div>
+  <li>
+    <CheckCircle className="pain-icon" />
+    <span>
+      Data only makes sense <b>inside the original platform</b>
+    </span>
+  </li>
 
-          <div className="text-center">
-            <Crosshair className="mx-auto h-10 w-10" />
-            <p className="mt-2 font-semibold">
-              You Own
-              <br />
-              Your Data
-            </p>
-          </div>
+  <li>
+    <CheckCircle className="pain-icon" />
+    <span>
+      Migrations require months, consultants, and internal politics
+    </span>
+  </li>
 
-          <div className="text-center">
-            <Brain className="mx-auto h-10 w-10" />
-            <p className="mt-2 font-semibold">
-              Helpful AI,
-              <br />
-              Respecting Your Privacy
-            </p>
-          </div>
+  <li>
+    <CheckCircle className="pain-icon" />
+    <span>
+      <b>Compliance</b> and chain-of-custody break after tool changes
+    </span>
+  </li>
 
-          <div className="text-center">
-            <Users className="mx-auto h-10 w-10" />
-            <p className="mt-2 font-semibold">
-              Simple Collaboration
-              <br />
-              (when you need it)
-            </p>
-          </div>
+  <li>
+    <CheckCircle className="pain-icon" />
+    <span>
+      Users resist <b>retraining</b> more than <b>technical</b> change
+    </span>
+  </li>
+
+  <li>
+    <CheckCircle className="pain-icon" />
+    <span>
+      Years of data become <b>'technically present'</b>, practically useless
+    </span>
+  </li>
+</ul>
         </div>
 
         <div className="email-field">
           <form onSubmit={handleClick} className="signup">
-  
-</form>
+
+          </form>
 
         </div>
 
         <div className="founder-introduction">
           <p>
-            Hi, I'm Nikolas. I'm building Veridian Prime because I believe productivity should
-            feel calm, private, and intentional. If owning your data and working without
-            distractions matters to you, I'd love to have you join early
+            <b>A neutral data layer</b> between you and your tools<br /><br />
+          </p>
+          <p>
+            Veridian Prime acts as a <b>sovereign data environment</b> where you and/or your 
+            <b>organization's core</b> information live independently of any single SaaS, 
+            platform or vendor.<br /><br />
+            Tools come and go. <b>Your data stays protected, structured, and usable.</b>
           </p>
         </div>
+
+        <section className="audience-fit">
+  <div className="audience-fit__container">
+
+    {/* LEFT COLUMN */}
+    <div className="audience-fit__column">
+      <h2>
+        Built for <b>teams</b> that think long-term
+      </h2>
+
+      <ul>
+        <li>
+          <Check className="icon icon--positive" />
+          <span>
+            You run a <b>small-mid</b> organization with long lived data
+          </span>
+        </li>
+
+        <li>
+          <Check className="icon icon--positive" />
+          <span>
+            You've experienced <b>painful migrations</b> or failed exports
+          </span>
+        </li>
+
+        <li>
+          <Check className="icon icon--positive" />
+          <span>
+            You operate in <b>legal, compliance,</b> or regulated environments
+          </span>
+        </li>
+
+        <li>
+          <Check className="icon icon--positive" />
+          <span>
+            You <b>self-host</b> or <b>care deeply</b> about data portability
+          </span>
+        </li>
+      </ul>
+    </div>
+
+
+    <div className="audience-fit__divider" />
+
+
+    {/* RIGHT COLUMN */}
+    <div className="audience-fit__column">
+      <h2>This is not for:</h2>
+
+      <ul>
+        <li>
+          <X className="icon icon--negative" />
+          <span>
+            Casual note-taking or personal journaling
+          </span>
+        </li>
+
+        <li>
+          <X className="icon icon--negative" />
+          <span>
+            Teams with disposable or short-term data
+          </span>
+        </li>
+
+        <li>
+          <X className="icon icon--negative" />
+          <span>
+            People who don't care about exporting their information
+          </span>
+        </li>
+
+        <li>
+          <X className="icon icon--negative" />
+          <span>
+            Productivity tourists looking for another "Notion alternative"
+          </span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
 
         <footer>
           <div className="contacts">
